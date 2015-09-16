@@ -1,6 +1,7 @@
 #Instalando a apresentação
 
-## Feito com Reveal .js
+## Feito com Reveal .js, usando o boilerplate de Willian Justen
+
 
 Instale globalmente gulp e node
 
