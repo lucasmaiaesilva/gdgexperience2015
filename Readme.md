@@ -1,52 +1,17 @@
-# Reveal.js Boilerplate
+#Instalando a apresentação
 
-This is a boilerplate to use [Reveal.JS](http://lab.hakim.se/reveal-js/) easily with [Gulp](http://gulpjs.com/), [Jade](http://jade-lang.com/) and [Stylus](http://learnboost.github.io/stylus/).
+## Feito com Reveal .js
 
-To know more about Reveal.js and how to use, [read the docs here](https://github.com/hakimel/reveal.js).
-
-
-## Getting Started
-
-### Installation
-
-First of all, install the dependencies to run this boilerplate.
+Instale globalmente gulp e node
 
 - [NodeJS](http://nodejs.org/)
 - [GulpJS](http://gulpjs.com/)
 
-```sh
-# Clone this repository
-$ git clone git://github.com/willianjusten/reveal-boilerplate.git new_project
-$ cd new_project
 
-# install dependencies
+# instalar Dependências
 $ npm install
-# run tasks and serve
+# rodar as tasks e setar servidor
 $ gulp
-```
-
-With the commands above, you have everything to start.
-
-```sh
-new_project -
-	/build -
-		/css
-			main.css
-		/js
-		    /vendor
-			main.js
-		index.html
-	/src -
-		/js
-		/slides
-		/styl
-		/styl
-		/templates
-		gulpfile.js
-		package.json
-	/tests -
-		/unit
-```
 
 ### Tasks
 
