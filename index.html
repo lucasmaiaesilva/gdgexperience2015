@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="some description about the slides">
+    <meta name="author" content="You">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section data-background="#edbe8f">
+            <h1 class="f-motion">Motion Design</h1>
+            <p class="s-main">uma nova experiência</p>
+          </section>
+          <section data-background="#0096bb">
+            <h2 class="c-white">Olá!! eu sou o Lucas</h2><img src="/img/eu.png" width="300">
+            <p class="intro">Twitter: @lucasmaiaesilva</p>
+            <p class="intro">Github: /lucasmaiaesilva</p>
+          </section>
+        </section>
+        <section class="c-def">
+          <section class="c-def">
+            <h1>Motion Design</h1>
+            <p>Norman McLaren, o grande pioneiro da técnica de animação do século XX, disse uma vez.</p>
+            <blockquote>Animação não é a arte de desenhos que se movem, mas a arte de movimentos que estão desenhados</blockquote>
+            <p>O que acontece entre cada frame é mais importante do que existe em cada frame</p>
+          </section>
+          <section>
+            <h2>Curva de aceleração</h2><img src="/img/curva-aceleracao.gif" class="img-max">
+          </section>
+          <section data-background="/img/bounce.gif"></section>
+          <section data-background="#f95456"><img src="/img/pendulum.gif"></section>
+          <section data-background="/img/wow.gif"></section>
+          <section>
+            <h1>Motion Designer</h1>
+            <h2>O profissional que faz todo o processo acontecer</h2>
+            <blockquote>Talvez eu tenha uma visão muito poética sobre a minha profissão e isso me faça ser um pouco imparcial. Mas, pra mim, animar é reproduzir a física, é chamar e prender a atenção, é guiar os olhos, impor rítmo, divertir e entreter o interator. Além de, claro, pagar as minhas contas.</blockquote>
+            <p class="bq-author">Priscila Garcia</p><a href="http://chocoladesign.com/porque-ser-motion-designer">Porque ser um Motion Designer</a>
+          </section>
+          <section>
+            <h1>Motion Designer</h1>
+            <ul>
+              <li>Geralmente atua em Televisão, Agências de publicidade criando movimentos em letreiros, vinhetas etc.</li>
+              <li>Cerca de 12 minutos em cada hora de televisão são trabalho de um designer de animação</li>
+              <li>Profissão que existe a muito tempo atrás e que agora torna-se mais disseminada graças a tecnologia acessível</li>
+            </ul>
+          </section>
+          <section>
+            <h1>E para Web?</h1>
+          </section>
+        </section>
+        <section class="c-def">
+          <section class="sec-slide top text-left">
+            <h1>Flash</h1>
+            <ul>
+              <li class="fragment">Baixa Interação com o Browser</li>
+              <li class="fragment">Necessidade de instalar plug-ins em alguns Browsers</li>
+              <li class="fragment">Páginas Pesadas</li>
+              <li class="fragment">Servidores mais robustos e com respostas não equivalentes</li>
+              <li class="fragment">Acessibilidade</li>
+            </ul>
+          </section>
+          <section data-background="/img/load-block.gif"></section>
+          <section data-background="#000">
+            <h1 style="color: #fff">Flash morreu</h1><img src="/img/flash-dead.png" class="img-max">
+          </section>
+          <section data-background="#0096bb"><img src="/img/html5.png" class="img-max"></section>
+          <section class="sec-slide top text-left">
+            <h2>Tipos de animação em HTML</h2>
+            <ul>
+              <li class="fragment">CSS3</li>
+              <ul>
+                <li class="fragment">Transform</li>
+                <li class="fragment">Transition</li>
+                <li class="fragment">Animation</li>
+              </ul>
+              <li class="fragment">SVG SMIL</li>
+              <li class="fragment">Javascript em geral (Canvas)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Propriedades geralmente alteradas por animações</h2><img src="/img/propriedades-alteradas-por-animacoes.png" class="img-max">
+          </section>
+        </section>
+        <section class="c-def">
+          <section>
+            <h1>Criando movimentos com SVG</h1>
+            <pre><code><svg id="element" height="100" width="100" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#213b4c"></circle>
+</svg>
+</code></pre>
+          </section>
+          <section>
+            <h2>Utilizando @keyframes</h2>
+            <pre><code>#element {
+  position: absolute;
+  -webkit-animation: move-vertical 1s infinite alternate linear;
+}
+@-webkit-keyframes move-vertical {
+  0%   { bottom: 300px; }
+  100% { bottom: 0px;   }
+}</code></pre>
+            <div class="jump">
+              <svg id="element" height="100" width="100" viewBox="0 0 100 100">
+                <circle id="circle" cx="50" cy="50" r="50" fill="#213b4c"></circle>
+              </svg>
+            </div>
+          </section>
+          <section>
+            <h2>Propriedades @keyframes</h2>
+            <pre><code>.box {
+animation-name: bounce;
+animation-duration: 4s;
+animation-iteration-count: 10;
+animation-direction: alternate;
+animation-timing-function: ease-out;
+animation-fill-mode: forwards;
+animation-delay: 2s;
+}</code></pre>
+            <table>
+              <tbody>
+                <tr>
+                  <td>timing-function</td>
+                  <td>ease, ease-out, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) (e.g. cubic-bezier(0.5, 0.2, 0.3, 1.0))</td>
+                </tr>
+                <tr>
+                  <td>duration & delay</td>
+                  <td>Xs or Xms</td>
+                </tr>
+                <tr>
+                  <td>duration-count</td>
+                  <td>X</td>
+                </tr>
+                <tr>
+                  <td>fill-mode</td>
+                  <td>forwards, backwards, both, none</td>
+                </tr>
+                <tr>
+                  <td>animation direction</td>
+                  <td>normal, alternate</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h2>Utilizando SMIL</h2>
+            <h3>Synchronized Multimedia Integration Language</h3>
+            <pre><code><svg width="100" height="300">
+  <circle id="orange-circle" r="30" cx="50" cy="50" fill="orange" />
+  <animate
+    xlink:href="#orange-circle"
+    attributeName="cy"
+    from="50"
+    to="450" 
+    dur="1s"
+    begin="click"
+    fill="freeze" />
+</svg></code></pre>
+            <div class="jump">
+              <svg height="500" width="100">
+                <circle id="orange-circle" cx="50" cy="50" r="50" fill="orange"></circle>
+                <animate xlink:href="#orange-circle" attributeName="cy" from="50" to="300" dur="1s" begin="click" fill="freeze"></animate>
+              </svg>
+            </div><a href="">Exemplo retirado do blog de Willian Justen</a>
+          </section>
+          <section>
+            <h1>Utilizando Canvas</h1><img src="/img/canvas-explain.png">
+          </section>
+          <section>
+            <h2>Live Code Canvas</h2>
+          </section>
+        </section>
+        <section class="c-def">
+          <section>
+            <h2>Make Sense</h2>
+            <p>A animação é uma camada que ajuda a interface a comunicar-se com o usuário.</p>
+          </section>
+          <section>
+            <h1>Considerações finais</h1><img src="/img/eu.jpg" width="300" height="auto">
+          </section>
+          <section>
+            <h2>Perguntas? ...</h2>
+            <h2>obrigado !!!!!</h2>
+          </section>
+        </section>
+        <!--  section
+        h2 Links
+        ul
+          li
+            a(href='')
+          li
+            a(href='')
+        -->
+      </div>
+      <script src="js/vendor/head.min.js"></script>
+      <script src="js/vendor/reveal.min.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </body>
+</html>
