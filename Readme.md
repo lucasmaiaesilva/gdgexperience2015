@@ -2,6 +2,7 @@
 
 ## Feito com Reveal .js, usando o boilerplate de Willian Justen
 
+[link para o Boilerplate](https://github.com/willianjusten/reveal-boilerplate)
 
 Instale globalmente gulp e node
 
